@@ -22,9 +22,10 @@ volumes:
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
   DATABASE_HOST: db
-  DATABASE_NAME: vapor_database
-  DATABASE_USERNAME: vapor_username
-  DATABASE_PASSWORD: vapor_password
+  DATABASE_NAME: yt_vapor_database
+  DATABASE_USERNAME: yt_vapor_database_user
+  DATABASE_PASSWORD: YCsLsZPlr320gf7BlR1b8maok67JvKk2
+  DATABASE_URL: postgres://yt_vapor_database_user:YCsLsZPlr320gf7BlR1b8maok67JvKk2@dpg-cndht56n7f5s73ble00g-a.frankfurt-postgres.render.com/yt_vapor_database
   
 services:
   app:
@@ -72,3 +73,5 @@ services:
       POSTGRES_DB: vapor_database
     ports:
       - '5432:5432'
+      
+docker compose run migrate
