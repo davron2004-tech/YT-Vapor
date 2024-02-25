@@ -49,7 +49,7 @@ services:
       - db
     command: ["migrate", "--yes"]
     deploy:
-      replicas: 0
+      replicas: 1
   revert:
     image: y-t--vapor:latest
     build:
