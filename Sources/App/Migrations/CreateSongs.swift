@@ -23,17 +23,4 @@ struct CreateSongs: AsyncMigration{
             .delete()
     }
     
-//    func prepare(on database: FluentKit.Database) -> EventLoopFuture<Void> {
-//        return database.schema("Songs")
-//            .id()
-//            .field("title", .string, .required)
-//            .create()
-//    }
-//    
-//    func revert(on database: FluentKit.Database) -> EventLoopFuture<Void> {
-//        return database.schema("Songs")
-//            .delete()
-//    }
-    
-    
 }
